@@ -1,0 +1,24 @@
+{
+  "name": "fruit-busket",
+  "uuid": "cd58e0e4-3caa-4a64-b79e-d7841fc39e82",
+  "description": "Fruit catching game",
+  "creator": {
+    "version": "3.8.7"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,css}": [
+      "eslint"
+    ]
+  },
+  "author": "Vladislav Zhidko",
+  "license": "ISC",
+  "dependencies": {
+    "inversify": "^7.10.4",
+    "miniplex": "^2.0.0",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@cocos/creator-types": "^3.8.7",
+    "typescript": "^5.5.3"
+  }
+}

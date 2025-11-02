@@ -1,0 +1,34 @@
+{
+  "extends": "./temp/tsconfig.cocos.json",
+
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noResolve": false,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "lib": [
+      "dom",
+      "es6",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true,
+    "types": [
+      "node",
+      "reflect-metadata"
+    ],
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
