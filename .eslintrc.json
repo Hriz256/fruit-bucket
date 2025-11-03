@@ -1,0 +1,96 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "ignorePatterns": ["*.css", "**/vendor/*.css"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".d.ts"]
+      },
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import/no-named-as-default": 0,
+    "max-len": ["error", { "code": 160 }],
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "func-names": "off",
+    "no-undef": "off",
+    "linebreak-style": "off",
+    "operator-linebreak": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "no-new": "off",
+    "class-methods-use-this": "off",
+    "no-dupe-class-members": "off",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": ["return", "if", "for", "while"] }
+    ],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/explicit-member-accessibility": "warn",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "classProperty",
+        "modifiers": ["private"],
+        "format": ["camelCase"],
+        "leadingUnderscore": "require"
+      },
+      {
+        "selector": "parameter",
+        "format": ["camelCase"],
+        "leadingUnderscore": "forbid"
+      }
+    ],
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "enums": "always-multiline",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+    "arrow-body-style": "off",
+    "no-param-reassign": "off",
+    "no-bitwise": "off",
+    "object-curly-newline": "off",
+    "no-restricted-syntax": ["error", "IfStatement > ExpressionStatement > AssignmentExpression"],
+    "no-underscore-dangle": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off"
+  },
+  "root": true
+}

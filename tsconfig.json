@@ -2,6 +2,7 @@
   "extends": "./temp/tsconfig.cocos.json",
 
   "compilerOptions": {
+    "strict": true,
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -15,7 +16,8 @@
     "emitDecoratorMetadata": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "baseUrl": "src",
+    "baseUrl": "assets/scripts",
+    "allowImportingTsExtensions": true,
     "lib": [
       "dom",
       "es6",
@@ -23,10 +25,10 @@
       "DOM.Iterable"
     ],
     "skipLibCheck": true,
-    "types": [
-      "node",
-      "reflect-metadata"
-    ],
+    "types": [],
+    "paths": {
+      "cc": ["../../node_modules/@cocos/creator-types/engine/cc.d.ts"]
+    }
   },
   "exclude": [
     "node_modules"
